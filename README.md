@@ -38,21 +38,30 @@ This project is an AI-powered tool designed to help users generate customized re
 - Python 3.10+
 - Chrome browser and ChromeDriver installed
 - OpenAI API key
+- Set your OpenAI API key as an environment variable named `OPENAI_API_KEY`
 
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/job_resume_generator.git
+git clone https://github.com/tarekivida/job_resume_generator.git
 cd job_resume_generator
 pip install -r requirements.txt
 ```
 
 ### Running the App
 
+Before generating a resume, you must log in to LinkedIn using the `login_and_save_state_first.py` script. This will store your session and allow the job_parser to extract job descriptions.
+
 ```bash
 streamlit run app.py
 ```
 
+Make sure your `OPENAI_API_KEY` environment variable is set, for example:
+
+```bash
+export OPENAI_API_KEY="your-openai-key"
+```
+  
 ## Project Structure
 
 ```
